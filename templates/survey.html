@@ -1,0 +1,33 @@
+<ion-view title="Survey" id="page5">
+  <ion-content padding="true" class="has-header">
+    <div id="survey-markdown1" class="show-list-numbers-and-dots">
+      <p style="color:#000000;">Fill out this form, and we'll record results:</p>
+    </div>
+    <form id="survey-form1" class="list">
+      <label class="item item-input" id="survey-input3" name="name">
+        <span class="input-label">Name</span>
+        <input type="text" placeholder="Type your name" ng-model="data.name">
+      </label>
+      <div id="survey-markdown2" ng-hide="nameIsRequired" class="show-list-numbers-and-dots">
+        <p style="color:#D62525;">Please enter your name
+          <strong>markdown</strong>
+        </p>
+      </div>
+      <label class="item item-select" id="survey-select1" name="Color">
+        <span class="input-label">Select</span>
+        <select ng-model="data.color">
+          <option>Green</option>
+          <option>Red</option>
+          <option>Blue</option>
+        </select>
+      </label>
+      <h4 id="survey-heading1" style="color:#000000;">Topping</h4>
+      <ion-radio id="survey-radio3" name="topping" ng-model="data.topping" ng-value="&quot;Topping 1&quot;">Topping 1</ion-radio>
+      <ion-radio id="survey-radio5" name="topping" ng-model="data.topping" ng-value="&quot;Topping 2&quot;">Topping 2</ion-radio>
+      <ion-radio id="survey-radio4" name="topping" ng-model="data.topping" ng-value="&quot;Topping 3&quot;">Topping 3</ion-radio>
+      <div style="margin-right:-20px;">
+        <button id="survey-button1" ng-click="submit()" ng-disabled="submitting" style="left:-10px;" class="button button-positive button-full">Submit</button>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>
